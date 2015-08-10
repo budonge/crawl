@@ -9,7 +9,7 @@ fin=open("config","r")
 def sp(a,b):
 	fout=open("x"+str(a)+"-"+str(b),"w")
 	print >> fout,"%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s" % ("网址","标书标题","加入日期","截止日期","招标编号","所属行业","地区","采招类型","招标机构","关键词")
-	db=MySQLdb.connect(host='rdsmn6fyafv3man1369040161922.mysql.rds.aliyuncs.com',user='crawler',passwd='xxxxxx',db='bilian',charset='utf8')
+	db=MySQLdb.connect(host='*******',user='******',passwd='******',db='******',charset='utf8')
 	sql="SELECT url,content FROM crawl_enter WHERE us_id>='%d' and us_id<='%d'" % (a,b)
 	cursor=db.cursor();
 	cursor.execute(sql)
