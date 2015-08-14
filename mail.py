@@ -19,13 +19,13 @@ def sendattachmail ():
 	content = '附件请查收'  #正文内容
 	body = MIMEText(content,'plain','utf-8') #设置字符编码
 	msg.attach(body)
-	msgto = ['weifang.wen@salespro.cn','fan.yu@salespro.cn']
+	msgto = ['*******','***********']
 	msgfrom = 'fan.yu@salespro.cn' # 寄信人地址
 	msg['subject'] = CURRENTDAY+'  必联今日抓取情况'  #主题
 	msg['date']=time.ctime() 
-	msg['Cc']='data@salespro.cn'
-	mailuser = 'fan.yu@salespro.cn'  # 用户名
-	mailpwd = 'Beyond123' #密码
+	msg['Cc']='********'
+	mailuser = '***********'  # 用户名
+	mailpwd = '******************' #密码
 	try:
 		smtp = smtplib.SMTP()
 		smtp.connect(r'smtp.mxhichina.com')# smtp设置
